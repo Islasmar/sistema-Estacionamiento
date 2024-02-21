@@ -1,0 +1,60 @@
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    }
+
+    .sidenav{
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(13, 90, 92);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .main{
+        margin-left: 200px;
+    }
+    @media screen and(max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a { font-size: 18px;}
+        
+    }
+    .sidenav a{
+        padding: 6px 6px 6px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+        display: block;
+    }
+    .sidenav a:hover{
+        color: white;
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
+
+    .titulo{
+        background-color: rgb(13, 90, 92);
+        color: white;
+    }
+    .container{
+        height: 50px;
+    }

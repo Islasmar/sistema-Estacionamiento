@@ -6,7 +6,7 @@
         <br>
         <div class="form-outline mb-4">
             <label class="form-label" for="numero">Distancia</label>
-            <input type="number" class="form-control" name="numero" id="numero">
+            <input type="number" class="form-control" name="distancia" id="distancia">
         </div>
         <div class="form-outline mb-4">
             <label class="form-label" for="status">Status</label>

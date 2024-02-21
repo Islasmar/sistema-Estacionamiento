@@ -160,6 +160,26 @@ function registrarSensor() {
     )
 }
 
+function registrarProximidad() {
+    var distancia = $("#distancia").val();
+    var status = $("#status").val();
+
+
+    $.post("registrarProximidad.php", {
+        "distancia": distancia,
+        "status": status
+    },
+        function (result) {
+            alert(result);
+            $("#distancia").val("");
+            $("#status").val("");
+            cargarDiv($("#result"),'consultarProximidad.php');
+
+        }
+    )
+}
+
+
 
 function eliminarCliente(id_cliente){
     $.post("eliminarcliente.php",{
@@ -229,7 +249,17 @@ function eliminarsensor(id_sensor){
         alert (result);
         cargarDiv($("#result"),'consultarsensor.php')
     });
-}
+};
+
+function eliminarProximidad(id_proximidad){
+    $.post("eliminarProximidad.php",{
+        "id_proximidad": id_proximidad
+    },
+    function (result){
+        alert (result);
+        cargarDiv($("#result"),'consultarProximidad.php')
+    });
+};
 
 function editarCliente(id_cliente){
     $.post("actualizarcliente.php",{
@@ -402,6 +432,33 @@ function actualizarEncargados(id_encargado){
         function (result) {
             alert(result);
             cargarDiv($("#contenido"),'encargados.php');
+
+        }
+    )
+
+}
+
+function editarProximidad(id_proximidad){
+    $.post("actualizarProximidad.php",{
+        "id_proximidad": id_proximidad
+    },
+    function(respuesta){
+        contenido.innerHTML = respuesta;
+    });
+}
+
+function actualizarProximidad(id_proximidad){
+    var distancia = $("#distancia").val();
+    var status = $("#status").val();
+
+    $.post("updateProximidad.php", {
+        "id_proximidad": id_proximidad,
+        "distancia": distancia,
+        "status": status,
+    },
+        function (result) {
+            alert(result);
+            cargarDiv($("#contenido"),'sensorproximidad.php');
 
         }
     )
